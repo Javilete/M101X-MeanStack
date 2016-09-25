@@ -1,0 +1,4 @@
+rm -rf ./bin
+gulp browserify
+cd  ./server
+node index.js

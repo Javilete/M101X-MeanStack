@@ -1,0 +1,18 @@
+<!--
+TODO: this HTML should expose a search bar
+!-->
+
+<div class="search-bar-wrapper">
+  <label id="search-text">Searchh:</label>
+  <input for="search-text" type="text" class="search-bar-input"
+    data-ng-model="searchText"
+    data-ng-change="update()">
+
+  <ul class="autocomplete-results" data-ng-if="results.length > 0">
+    <li class="autocomplete-result" data-ng-repeat="item in results">
+        <a ng-href="#/product/{{item._id}}">
+          <img data-ng-src="{{item.pictures[0]}}" />
+        </a>
+    </li>
+  </ul>
+</div>
